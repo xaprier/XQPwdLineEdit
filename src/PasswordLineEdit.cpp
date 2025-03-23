@@ -8,8 +8,10 @@ PasswordLineEdit::PasswordLineEdit(bool showPassword, SwitchType type,
     : QLineEdit(parent) {
     m_ShowPassword = showPassword;
     m_Type = type;
-    m_HideIcon = hideIcon;
-    m_ShowIcon = showIcon;
+
+    // if the icons are not set, use the default icons
+    m_HideIcon = hideIcon.isNull() ? style()->standardIcon(QStyle::SP_DialogCancelButton) : hideIcon;
+    m_ShowIcon = showIcon.isNull() ? style()->standardIcon(QStyle::SP_DialogOkButton) : showIcon;
 
     QAction *action = addAction(m_ShowIcon, QLineEdit::TrailingPosition);
     m_Button = qobject_cast<QToolButton *>(action->associatedWidgets().last());

@@ -16,12 +16,10 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Widgets)
 
 file(GLOB_RECURSE CPP_FILES src/*.cpp)
 file(GLOB_RECURSE HPP_FILES include/*.hpp)
-file(GLOB_RECURSE QRC_FILES resources/*.qrc)
 
 set(PROJECT_SOURCES
     ${CPP_FILES}
     ${HPP_FILES}
-    ${QRC_FILES}
 )
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)

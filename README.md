@@ -1,8 +1,6 @@
 # XQPwdLineEdit
 Password line edit using Qt Widgets with show/hide toggle
 
-Embedded icons got from <a href="https://www.flaticon.com/authors/bankume" target="_blank">FlatIcon - bankume</a>, but you can set your icons either.
-
 ### 📌 Adding XQPwdLineEdit as a Git Submodule
 
 1. Navigate to your project directory:

@@ -4,6 +4,7 @@
 #include <QAction>
 #include <QIcon>
 #include <QLineEdit>
+#include <QStyle>
 #include <QToolButton>
 
 namespace xaprier {
@@ -18,8 +19,8 @@ class PasswordLineEdit : public QLineEdit {
         Show,
     };
 
-    PasswordLineEdit(bool showPassword = false, SwitchType type = Toggle, const QIcon &hideIcon = QIcon(":/icons/eyeOff.png"),
-                     const QIcon &showIcon = QIcon(":/icons/eyeOn.png"), QWidget *parent = nullptr);
+    PasswordLineEdit(bool showPassword = false, SwitchType type = Toggle, const QIcon &hideIcon = QIcon(),
+                     const QIcon &showIcon = QIcon(), QWidget *parent = nullptr);
 
     void SetIcon(const QIcon &hide, const QIcon &show);
     void SetHideIcon(const QIcon &icon);
